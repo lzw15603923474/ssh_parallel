@@ -1,0 +1,110 @@
+[project]
+name = "ssh-parallel"
+version = "1.0.0"
+description = "SSH批量执行工具 - 支持GUI和CLI模式"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    { name = "Developer", email = "dev@example.com" }
+]
+keywords = ["ssh", "batch", "asyncssh", "paramiko", "tkinter"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Operating System :: Microsoft :: Windows",
+    "Topic :: System :: Networking",
+]
+
+dependencies = [
+    "asyncssh>=2.14.0",
+    "paramiko>=3.0.0",
+    "openpyxl>=3.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pyinstaller>=6.0",
+]
+
+[project.scripts]
+ssh-parallel = "main:main"
+
+[project.gui-scripts]
+ssh-parallel-gui = "main:main"
+
+[[tool.uv.index]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
+
+[dependency-groups]
+dev = [
+    "mypy",
+    "pre-commit>=4.6.1",
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = [
+    "main",
+    "gui",
+    "cli",
+    "config",
+    "host_manager",
+    "ssh_core",
+    "ssh_parallel_tool",
+]
+
+
+
+
+
+# [tool.ruff]
+# line-length = 88
+# target-version = "py312"
+# exclude = [
+#     ".git",
+#     ".venv",
+#     "build",
+#     "dist",
+#     "__pycache__",
+#     "migrations",
+#     "*.ipynb",
+# ]
+# 
+# [tool.ruff.lint]
+# select = [
+#     "E",   # pycodestyle errors
+#     "W",   # pycodestyle warnings
+#     "F",   # pyflakes
+#     "I",   # isort
+#     "UP",  # pyupgrade
+#     "B",   # flake8-bugbear
+#     "SIM", # flake8-simplify
+#     "C4",  # flake8-comprehensions
+#     "N",   # pep8-naming
+#     "RET", # flake8-return
+# ]
+# ignore = [
+#     "E501",  # 行太长，交给 formatter 处理
+#     "B008",  # 函数默认参数里调用函数，FastAPI 的 Depends 用法
+# ]
+# 
+# [tool.ruff.lint.per-file-ignores]
+# "__init__.py" = ["F401"]
+# "tests/*" = ["S101"]
+# 
+# [tool.ruff.lint.isort]
+# known-first-party = ["my_project"]
+# 
+# [tool.ruff.format]
+# quote-style = "double"
+# indent-style = "space"
+# line-ending = "auto"
