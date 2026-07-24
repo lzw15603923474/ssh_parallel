@@ -1,0 +1,7 @@
+cli
+config
+gui
+host_manager
+main
+ssh_core
+ssh_parallel_tool

@@ -1,0 +1,5 @@
+[console_scripts]
+ssh-parallel = main:main
+
+[gui_scripts]
+ssh-parallel-gui = main:main

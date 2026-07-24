@@ -1,0 +1,6 @@
+asyncssh>=2.14.0
+paramiko>=3.0.0
+openpyxl>=3.1.0
+
+[dev]
+pyinstaller>=6.0

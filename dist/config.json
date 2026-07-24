@@ -1,0 +1,42 @@
+{
+  "hosts": [
+    {
+      "name": "rocky",
+      "host": "10.0.0.30",
+      "port": 22,
+      "username": "lzw",
+      "password": "Huawei12#$",
+      "use_key": false,
+      "key_file": "",
+      "key_passphrase": "",
+      "sudo_enabled": false,
+      "sudo_password": "",
+      "switch_to_root": false,
+      "root_password": "Huawei12#$",
+      "group": "默认分组"
+    },
+    {
+      "name": "10.0.0.50",
+      "host": "10.0.0.50",
+      "port": 22,
+      "username": "root",
+      "password": "Huawei12#$",
+      "use_key": false,
+      "key_file": "",
+      "key_passphrase": "",
+      "sudo_enabled": false,
+      "sudo_password": "",
+      "switch_to_root": false,
+      "root_password": "",
+      "group": "默认分组"
+    }
+  ],
+  "connection": {
+    "timeout": 30,
+    "max_retries": 2,
+    "concurrency": 10
+  },
+  "groups": [
+    "默认分组"
+  ]
+}
